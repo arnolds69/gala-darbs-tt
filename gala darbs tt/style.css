@@ -1,0 +1,209 @@
+body{
+    margin:0px;
+    min-width: 600px
+}
+header{
+    background-color: black;
+    padding:25px;
+}
+.error{
+    color:red;
+}
+#navbarlist{
+    list-style-type: none;
+    text-align: center;
+}
+.navbarelement {
+    text-decoration: none;
+    color: white;
+    padding: 45px 25px 42px;
+    font-size: 25px;
+}
+.navbarelement:hover{
+    background-color:darkslategray;
+    color:chartreuse;
+}
+.home{
+    position:relative; /*savādāk ir pelēks lauks apakšā.*/
+    height:800px;
+    background: url('deadlockbackground.jpg') center/cover;
+}
+.home-content{
+    position:relative;
+    text-align:center;
+    padding-top:200px;
+    z-index:2;
+
+}
+.home-content h2{
+    margin: 0; /* heading, paragraph ir defaulta padding, margin, kas raisa baltas atstarpes starp header un bildi*/
+    padding: 0;
+    font-size:50px;
+    color:aliceblue;
+}
+.home-content p {
+  margin: 0; /* heading, paragraph ir defaulta padding, margin, kas raisa baltas atstarpes starp header un bildi*/
+  padding: 0;
+  font-size:23px;
+  color:aliceblue;
+}
+.home .btn{
+    margin-top: 300px;
+    text-decoration: none;
+    color:aliceblue;
+    display: inline-block;
+    font-size:24px;
+    padding:10px;
+    border-radius: 10px;
+    background-color:rgb(132, 175, 162);
+    transition: transform .2s;
+}
+.background-overlay{
+    background-color:rgba(0, 0, 0, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index:1;
+}
+.home .btn:hover {
+    background-color:darkslategray;
+    transform: scale(1.2);
+}
+#aboutdeadlock{
+    background-color:rgb(22, 27, 27);
+    padding-top:15px;
+    color:aliceblue
+    
+}
+h1{
+    text-align:center;
+    font-size:40px;
+    margin:0;
+    
+}
+.lists-container{
+    justify-content:center;
+    display:flex;
+    gap:500px;
+    align-items:flex-start;
+    font-size:20px;
+}
+.lists-container ol li{
+    color:burlywood;
+}
+.lists-container ul li{
+    color:coral;
+}
+h2{
+    margin:0;
+    text-align:center;
+    padding:10px;
+}
+table {
+    margin:0 auto; /*centere*/
+    border-spacing: 100px 15px; /*100px horizontala atsarpe un 15px vertikala*/
+}
+table th{
+    font-size:20px;
+    color:blueviolet;
+}
+table tr{
+    color:chocolate;
+}
+.character-card .more-info {
+    display: none;/*paslep info*/
+    margin-top: 10px;
+    font-size: 14px;
+    width:250px;
+    color:aliceblue;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding-top:15px;
+    padding-bottom:15px;
+}
+.character-card {
+    background-color:blueviolet;
+    border-radius:5px;
+    text-align:center;
+}
+.read-more{
+    background-color:darkorchid
+}
+#playablecharacters{
+    background-color:dimgrey;
+}
+#playablecharacters h2{
+    margin:0;
+    text-align:center;
+    padding-top:15px;
+}
+@media print {
+
+   /*slept pogas un header, noavadisanas linkus, jo tos nevajag uz printa*/
+   header,nav,.btn,.read-more {
+    display: none ;
+  }
+  /*rada read more information*/
+  .character-card .more-info {
+    display: block ;
+  }
+  /*nonem padding, kas bija lietots lai novietotu tekstu pareiza pozicija*/
+  .home .btn{
+    padding:0px;
+    display:none;
+  }
+  /*nonem background bildi*/
+  .home {
+    background: none;
+    height: auto;
+  }
+  
+  /*lai kartes, headings nav izgriezts cita lapa*/
+  #playablecharacters {
+    break-before: page;
+    page-break-before: always;
+  }
+}
+ /*dinamiskas kartes*/
+#charlist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+/* dinamiskas kartes */
+.char-card {
+    background-color:blueviolet;
+    border-radius:5px;
+    text-align:center;
+    padding-top:5px;
+    padding-bottom:5px;
+    max-width: 120px;
+}
+
+.char-card img {
+  width: 88px;
+  height: 119px;
+  object-fit: cover;
+}
+.char-card p {
+  overflow-wrap: break-word;  /* savādāk teksts iet ārā no kārts */
+  text-align: center;
+}
+.deadlock-form{
+    background-color:darkslategray;
+}
+#steamID, #shooterYes, #shooterNo, #matchYes, #matchNo, #day, #month, #year, #charabb, #charname, #charpic{
+    background-color:darkcyan;
+    color:aliceblue;
+}
+#charactersuggest {
+    background-color:rgb(58, 50, 50);
+    color:aliceblue;
+}
+
